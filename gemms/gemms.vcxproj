@@ -1,0 +1,1047 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_WIDGETS_LIB;QT_XML_LIB;QT_QUICKWIDGETS_LIB;QT_SQL_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;.\gemms;.\gemms\gemms\quickflux\;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtTextToSpeech;$(QTDIR)\include\QtQuickControls2;$(SolutionDir)iwkats_core;$(SolutionDir)3rdparty;$(SolutionDir)iwkats_ksmm;$(QTDIR)\include\QtQuickWidgets;.\gemms\algorithm;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtNetwork;.\gemms\algorithm\auto_quote;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)3rdparty\KSMMApi\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Qmld.lib;Qt5Quickd.lib;Qt5QuickControls2d.lib;Qt5Widgetsd.lib;Qt5Xmld.lib;Qt5QuickWidgetsd.lib;Qt5Sqld.lib;Qt5Networkd.lib;Qt5TextToSpeechd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_QML_LIB;QT_QUICK_LIB;QT_WIDGETS_LIB;QT_XML_LIB;QT_QUICKWIDGETS_LIB;QT_SQL_LIB;QT_NETWORK_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;.\gemms;.\gemms\gemms\quickflux\;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtTextToSpeech;$(QTDIR)\include\QtQuickControls2;$(SolutionDir)iwkats_core;$(SolutionDir)3rdparty;$(SolutionDir)iwkats_ksmm;$(QTDIR)\include\QtQuickWidgets;.\gemms\algorithm;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtNetwork;.\gemms\algorithm\auto_quote;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)3rdparty\KSMMApi\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Qml.lib;Qt5Quick.lib;Qt5QuickControls2.lib;Qt5Widgets.lib;Qt5Xml.lib;Qt5QuickWidgets.lib;Qt5Sql.lib;Qt5Network.lib;Qt5TextToSpeech.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iwkats_core\iwkats_core.vcxproj">
+      <Project>{7436afd4-b087-4146-afe7-30f82808df74}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\iwkats_ksmm\iwkats_ksmm.vcxproj">
+      <Project>{36afca6f-986c-4b86-ba7b-649525096587}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="cefc.png" />
+    <Image Include="cefc_logo.ico" />
+    <Image Include="images\cefc.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="images\header.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="images\selectedrow.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\images\cefc.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\images\header.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Resources\images\selectedrow.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\algo_stock_list_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing algo_stock_list_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing algo_stock_list_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\priv\qfappscriptdispatcherwrapper.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfappscriptdispatcherwrapper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfappscriptdispatcherwrapper.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\priv\qfappscriptrunnable.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfappscriptrunnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfappscriptrunnable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\priv\qfhook.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfhook.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfhook.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\priv\qflistener.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qflistener.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qflistener.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\priv\qfmiddlewareshook.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfmiddlewareshook.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfmiddlewareshook.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <ClInclude Include="gemms\quickflux\priv\qfsignalproxy.h" />
+    <ClInclude Include="gemms\quickflux\priv\quickfluxfunctions.h" />
+    <CustomBuild Include="gemms\quickflux\qfactioncreator.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfactioncreator.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfactioncreator.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfappdispatcher.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfappdispatcher.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfappdispatcher.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfapplistener.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfapplistener.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfapplistener.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfapplistenergroup.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfapplistenergroup.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfapplistenergroup.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfappscript.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfappscript.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfappscript.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfappscriptgroup.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfappscriptgroup.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfappscriptgroup.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfdispatcher.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfdispatcher.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfdispatcher.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qffilter.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qffilter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qffilter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfhydrate.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfhydrate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfhydrate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfkeytable.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfkeytable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfkeytable.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfmiddleware.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfmiddleware.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfmiddleware.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfmiddlewarelist.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfmiddlewarelist.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfmiddlewarelist.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfobject.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfobject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfobject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <CustomBuild Include="gemms\quickflux\qfstore.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing qfstore.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qfstore.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+    <ClInclude Include="gemms\quickflux\QuickFlux">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <None Include="actions\ActionTypes.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="actions\AppActions.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="actions\qmldir">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="gemms\quickflux\QFAppDispatcher" />
+    <None Include="gemms\quickflux\QFKeyTable" />
+    <None Include="js\Database.js" />
+    <CustomBuild Include="qml.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\Resources\actions\ActionTypes.qml;.\Resources\actions\AppActions.qml;.\Resources\actions\qmldir;.\Resources\images\cefc.png;.\Resources\images\header.png;.\Resources\images\selectedrow.png;.\Resources\middlewares\SystemMiddleware.qml;.\Resources\script\Database.js;.\Resources\stores\MainStore.qml;.\Resources\stores\qmldir;.\Resources\stores\RootStore.qml;.\Resources\Login.qml;.\Resources\MainWindow.qml;.\Resources\views\CompositeView.qml;.\Resources\Component\AlignLabelSpinBox.qml;.\Resources\Component\Chart.qml;.\Resources\Component\ChartTest.qml;.\Resources\Component\CTabViewStyle.qml;.\Resources\Component\FColorButton.qml;.\Resources\Component\FCommonContexMenu.qml;.\Resources\Component\FHoverButton.qml;.\Resources\Component\FLabelSpinBox.qml;.\Resources\Component\FLabelValue.qml;.\Resources\Component\FPopDialog.qml;.\Resources\Component\FSpinButton.qml;.\Resources\Component\FTable.qml;.\Resources\Component\FTextButton.qml;.\Resources\Component\FToolBar.qml;.\Resources\Component\FToolTip.qml;.\Resources\Component\HorseRaceLamp.qml;.\Resources\Component\JsonPath.js;.\Resources\Component\Node.qml;.\Resources\Component\QObjectList.qml;.\Resources\views\TableView\AssetFundTable.qml;.\Resources\views\TableView\AssetShareTable.qml;.\Resources\views\TableView\HistoryMatchTable.qml;.\Resources\views\TableView\HistoryOrderTable.qml;.\Resources\views\TableView\MatchTable.qml;.\Resources\views\TableView\OrderTable.qml;.\Resources\views\MenuView\CancelOrderMenuItem.qml;.\Resources\views\MenuView\ContextMenu.qml;.\Resources\views\MenuView\RefreshMenuItem.qml;.\Resources\views\MenuView\ResizeToContentsMenuItem.qml;.\Resources\views\TableView\AssetCodeTable.qml;.\Resources\views\MainQuoteView.qml;.\Resources\views\MainQuote\StockQuoteList.qml;.\Resources\views\MainQuote\StockQuoteView.qml;.\Resources\stores\MainQuoteStore.qml;.\Resources\stores\StockQuoteViewStore.qml;.\Resources\stores\StockQuoteListStore.qml;.\Resources\views\MarketBookList.qml;.\Resources\stores\MarketBookStore.qml;.\Resources\views\MainQuote\StockQuoteTab.qml;.\Resources\views\MainQuote\OrderMatchTab.qml;.\Resources\views\MainQuote\HistoryOrderMatchTab.qml;.\Resources\views\MainQuote\AssetFundShareTab.qml;.\Resources\views\MainQuote\StockQuoteViewTitle.qml;.\Resources\stores\StockObjectStore.qml;.\Resources\views\MainQuote\StockQuoteOperationPane.qml;.\Resources\stores\AutoQuoteObjectStore.qml;.\Resources\middlewares\AutoQuoteViewMiddleware.qml;.\Resources\views\AutoQuote\AutoQuoteView.qml;.\Resources\stores\AutoQuoteStockViewStore.qml;.\Resources\views\AutoQuote\AutoQuoteStockView.qml;.\Resources\views\AutoQuote\AutoQuoteStockList.qml;.\Resources\Component\CTextArea.qml;.\Resources\main.qml;.\Resources\views\AutoQuote\AutoQuoteViewTitle.qml;.\Resources\stores\AutoQuoteStockListStore.qml;.\Resources\Component\CountTimer.qml;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\Resources\actions\ActionTypes.qml;.\Resources\actions\AppActions.qml;.\Resources\actions\qmldir;.\Resources\images\cefc.png;.\Resources\images\header.png;.\Resources\images\selectedrow.png;.\Resources\middlewares\SystemMiddleware.qml;.\Resources\script\Database.js;.\Resources\stores\MainStore.qml;.\Resources\stores\qmldir;.\Resources\stores\RootStore.qml;.\Resources\Login.qml;.\Resources\MainWindow.qml;.\Resources\views\CompositeView.qml;.\Resources\Component\AlignLabelSpinBox.qml;.\Resources\Component\Chart.qml;.\Resources\Component\ChartTest.qml;.\Resources\Component\CTabViewStyle.qml;.\Resources\Component\FColorButton.qml;.\Resources\Component\FCommonContexMenu.qml;.\Resources\Component\FHoverButton.qml;.\Resources\Component\FLabelSpinBox.qml;.\Resources\Component\FLabelValue.qml;.\Resources\Component\FPopDialog.qml;.\Resources\Component\FSpinButton.qml;.\Resources\Component\FTable.qml;.\Resources\Component\FTextButton.qml;.\Resources\Component\FToolBar.qml;.\Resources\Component\FToolTip.qml;.\Resources\Component\HorseRaceLamp.qml;.\Resources\Component\JsonPath.js;.\Resources\Component\Node.qml;.\Resources\Component\QObjectList.qml;.\Resources\views\TableView\AssetFundTable.qml;.\Resources\views\TableView\AssetShareTable.qml;.\Resources\views\TableView\HistoryMatchTable.qml;.\Resources\views\TableView\HistoryOrderTable.qml;.\Resources\views\TableView\MatchTable.qml;.\Resources\views\TableView\OrderTable.qml;.\Resources\views\MenuView\CancelOrderMenuItem.qml;.\Resources\views\MenuView\ContextMenu.qml;.\Resources\views\MenuView\RefreshMenuItem.qml;.\Resources\views\MenuView\ResizeToContentsMenuItem.qml;.\Resources\views\TableView\AssetCodeTable.qml;.\Resources\views\MainQuoteView.qml;.\Resources\views\MainQuote\StockQuoteList.qml;.\Resources\views\MainQuote\StockQuoteView.qml;.\Resources\stores\MainQuoteStore.qml;.\Resources\stores\StockQuoteViewStore.qml;.\Resources\stores\StockQuoteListStore.qml;.\Resources\views\MarketBookList.qml;.\Resources\stores\MarketBookStore.qml;.\Resources\views\MainQuote\StockQuoteTab.qml;.\Resources\views\MainQuote\OrderMatchTab.qml;.\Resources\views\MainQuote\HistoryOrderMatchTab.qml;.\Resources\views\MainQuote\AssetFundShareTab.qml;.\Resources\views\MainQuote\StockQuoteViewTitle.qml;.\Resources\stores\StockObjectStore.qml;.\Resources\views\MainQuote\StockQuoteOperationPane.qml;.\Resources\stores\AutoQuoteObjectStore.qml;.\Resources\middlewares\AutoQuoteViewMiddleware.qml;.\Resources\views\AutoQuote\AutoQuoteView.qml;.\Resources\stores\AutoQuoteStockViewStore.qml;.\Resources\views\AutoQuote\AutoQuoteStockView.qml;.\Resources\views\AutoQuote\AutoQuoteStockList.qml;.\Resources\Component\CTextArea.qml;.\Resources\main.qml;.\Resources\views\AutoQuote\AutoQuoteViewTitle.qml;.\Resources\stores\AutoQuoteStockListStore.qml;.\Resources\Component\CountTimer.qml;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+    <None Include="qml\Master\AssetCodeTable.qml" />
+    <None Include="Resources\actions\ActionTypes.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\actions\AppActions.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\actions\qmldir">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\AlignLabelSpinBox.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\Chart.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\ChartTest.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\CountTimer.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\CTabViewStyle.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\CTextArea.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FColorButton.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FCommonContexMenu.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FHoverButton.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FLabelSpinBox.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FLabelValue.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FPopDialog.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FSpinButton.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FTable.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FTextButton.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FToolBar.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\FToolTip.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\HorseRaceLamp.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\JsonPath.js">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\Node.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Component\QObjectList.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\Login.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\main.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\MainWindow.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\middlewares\AutoQuoteViewMiddleware.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\middlewares\DialogMiddleware.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\middlewares\SystemMiddleware.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\script\Database.js">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\AutoQuoteObjectStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\AutoQuoteStockListStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\AutoQuoteStockViewStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\MainQuoteStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\MainStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\MarketBookStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\qmldir">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\RootStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\StockObjectStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\StockQuoteListStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\StockQuoteStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\stores\StockQuoteViewStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\AutoQuote\AutoQuoteStockList.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\AutoQuote\AutoQuoteStockView.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\AutoQuote\AutoQuoteView.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\AutoQuote\AutoQuoteViewTitle.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\CompositeView.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuoteView.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuote\AssetFundShareTab.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuote\HistoryOrderMatchTab.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuote\OrderMatchTab.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuote\StockQuoteList.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuote\StockQuoteOperationPane.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuote\StockQuoteTab.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuote\StockQuoteView.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MainQuote\StockQuoteViewTitle.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MarketBookList.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MenuView\CancelOrderMenuItem.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MenuView\ContextMenu.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MenuView\RefreshMenuItem.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\MenuView\ResizeToContentsMenuItem.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\TableView\AssetCodeTable.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\TableView\AssetFundTable.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\TableView\AssetShareTable.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\TableView\HistoryMatchTable.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\TableView\HistoryOrderTable.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\TableView\MatchTable.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Resources\views\TableView\OrderTable.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="stores\MainStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="stores\qmldir">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="stores\RootStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="stores\TodoStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="stores\UserPrefsStore.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="views\Footer.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="views\Header.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="views\TodoItem.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="views\TodoList.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="views\TodoVisualModel.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gemms.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gemms\dao\auto_quote_dao.cc" />
+    <ClCompile Include="gemms\main.cpp" />
+    <ClCompile Include="gemms\model\algo_stock_list_model.cc" />
+    <ClCompile Include="gemms\model\asset_code_model.cpp" />
+    <ClCompile Include="gemms\model\asset_fund_model.cpp" />
+    <ClCompile Include="gemms\model\asset_share_model.cpp" />
+    <ClCompile Include="gemms\model\infobar_model.cpp" />
+    <ClCompile Include="gemms\model\market_book_model.cpp" />
+    <ClCompile Include="gemms\model\match_info_model.cpp" />
+    <ClCompile Include="gemms\model\order_info_model.cpp" />
+    <ClCompile Include="gemms\model\quote_match_info_model.cpp" />
+    <ClCompile Include="gemms\model\quote_order_info_model.cpp" />
+    <ClCompile Include="gemms\model\stock_list_model.cpp" />
+    <ClCompile Include="gemms\quickflux\priv\qfhook.cpp" />
+    <ClCompile Include="gemms\quickflux\priv\qfmiddlewareshook.cpp" />
+    <ClCompile Include="gemms\quickflux\priv\qfsignalproxy.cpp" />
+    <ClCompile Include="gemms\quickflux\priv\quickfluxfunctions.cpp" />
+    <ClCompile Include="gemms\quickflux\qfactioncreator.cpp" />
+    <ClCompile Include="gemms\quickflux\qfappdispatcher.cpp" />
+    <ClCompile Include="gemms\quickflux\qfapplistener.cpp" />
+    <ClCompile Include="gemms\quickflux\qfapplistenergroup.cpp" />
+    <ClCompile Include="gemms\quickflux\qfappscript.cpp" />
+    <ClCompile Include="gemms\quickflux\qfappscriptdispatcherwrapper.cpp" />
+    <ClCompile Include="gemms\quickflux\qfappscriptgroup.cpp" />
+    <ClCompile Include="gemms\quickflux\qfappscriptrunnable.cpp" />
+    <ClCompile Include="gemms\quickflux\qfdispatcher.cpp" />
+    <ClCompile Include="gemms\quickflux\qffilter.cpp" />
+    <ClCompile Include="gemms\quickflux\qfhydrate.cpp" />
+    <ClCompile Include="gemms\quickflux\qfkeytable.cpp" />
+    <ClCompile Include="gemms\quickflux\qflistener.cpp" />
+    <ClCompile Include="gemms\quickflux\qfmiddleware.cpp" />
+    <ClCompile Include="gemms\quickflux\qfmiddlewarelist.cpp" />
+    <ClCompile Include="gemms\quickflux\qfobject.cpp" />
+    <ClCompile Include="gemms\quickflux\qfqmltypes.cpp" />
+    <ClCompile Include="gemms\quickflux\qfstore.cpp" />
+    <ClCompile Include="gemms\user_api.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_algo_stock_list_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_asset_code_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_asset_fund_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_asset_share_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_auto_quote_dao.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_infobar_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_market_book_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_match_info_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_order_info_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfactioncreator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfappdispatcher.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfapplistener.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfapplistenergroup.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfappscript.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfappscriptdispatcherwrapper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfappscriptgroup.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfappscriptrunnable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfdispatcher.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qffilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfhook.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfhydrate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfkeytable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qflistener.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfmiddleware.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfmiddlewarelist.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfmiddlewareshook.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qfstore.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_quote_match_info_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_quote_order_info_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_stock_list_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_user_api.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_qml.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_algo_stock_list_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_asset_code_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_asset_fund_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_asset_share_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_auto_quote_dao.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_infobar_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_market_book_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_match_info_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_order_info_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfactioncreator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfappdispatcher.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfapplistener.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfapplistenergroup.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfappscript.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfappscriptdispatcherwrapper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfappscriptgroup.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfappscriptrunnable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfdispatcher.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qffilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfhook.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfhydrate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfkeytable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qflistener.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfmiddleware.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfmiddlewarelist.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfmiddlewareshook.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qfstore.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_quote_match_info_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_quote_order_info_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_stock_list_model.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_user_api.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\dao\auto_quote_dao.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing auto_quote_dao.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing auto_quote_dao.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\asset_code_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing asset_code_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing asset_code_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\asset_fund_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing asset_fund_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing asset_fund_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\asset_share_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing asset_share_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing asset_share_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\infobar_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing infobar_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing infobar_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\market_book_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing market_book_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing market_book_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\match_info_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing match_info_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing match_info_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\order_info_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing order_info_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing order_info_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\quote_match_info_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing quote_match_info_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing quote_match_info_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\quote_order_info_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing quote_order_info_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing quote_order_info_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\model\stock_list_model.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing stock_list_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing stock_list_model.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gemms\user_api.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing user_api.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing user_api.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -D_UNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_QML_LIB -DQT_QUICK_LIB -DQT_WIDGETS_LIB -DQT_XML_LIB -DQT_QUICKWIDGETS_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB  "-I.\GeneratedFiles" "-I." "-I.\gemms" "-I.\gemms\gemms\quickflux" "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtQml" "-I$(QTDIR)\include\QtQuick" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtTextToSpeech" "-I$(QTDIR)\include\QtQuickControls2" "-I$(SolutionDir)iwkats_core" "-I$(SolutionDir)3rdparty" "-I$(SolutionDir)iwkats_ksmm" "-I$(QTDIR)\include\QtQuickWidgets" "-I.\gemms\algorithm" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtNetwork" "-I.\gemms\algorithm\auto_quote"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_Win32="msvc2015" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
